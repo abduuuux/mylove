@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why I Love Umaima</title>
+    <link rel="stylesheet" href="practice.css"
+</head>
+<body>
+
+    <header>
+        <h1>Why I Love Umaima</h1>
+        <p>A small website dedicated to the person who changed my world</p>
+        <hr>
+    </header>
+
+    <section id="about-her">
+        <h2>Who is Umaima?</h2>
+        <p>
+            Umaima is someone incredibly special to me. She has a unique way of making everything brighter.
+            Her personality, her kindess, and her presence are things I cherish every single day.
+        </p>
+    </section>
+
+    <section id="why-i-love">
+        <h2>Why I Love Her</h2>
+        <ul>
+            <li>She makes me feel valued and understood.</li>
+            <li>Her smile can fix even the worst days.</li>
+            <li>She supports me, motivates me, and pushes me to be better.</li>
+            <li>Her heart is pure, kind, and beautiful.</li>
+            <li>She is genuinenly one of a kind</li>
+        </ul>
+    </section>
+
+    <section id="how-i-fell">
+        <h2>How I Fell for Her</h2>
+        <p>
+            It wasn't a single moment it was a collection of small things.
+            The way she talks... the way she laughs... the way she listens... 
+            Slowly, without even realizing, I found myself falling for her completely.
+        </p>
+    </section>
+
+    <section id="message">
+        <h2>A Message for Her</h2>
+        <p>
+            If you're ever reading this, Umaima thankyou for being you.
+            You're truly special, and knowing you has been one of the best thing in my life.
+        </p>
+    </section>
+
+    <footer>
+        <hr>
+        <p>Made with love by someone who loves you a lot and won't stop loving you.</p>
+    </footer>
+
+    <div id="loveMessage" style="display: none;">
+    I love youuu Meri jaan ❤️
+   </div>
+
+   <button onclick="buttonClicked()">Click Me</button>
+
+   <script>
+
+    function buttonClicked() {
+        showMessage();
+        spawnHearts();
+    }
+
+
+    function showMessage() {
+        const msg = document.getElementById('loveMessage');
+        msg.style.display = 'block';
+        msg.style.opacity = 1;
+    }
+
+    function spawnHearts() {
+        for (let i = 0; i < 20; i++) {
+            createHeart();
+        }
+    }
+
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "floating-heart";
+        heart.innerText = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (50 + Math.random() * 40) + "px";
+        document.body.appendChild(heart);
+        setTimeout(()=> {
+            heart.remove();
+         }, 3000);
+  }
+   </script>
+
+</body>
+</html>

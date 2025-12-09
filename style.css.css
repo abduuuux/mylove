@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #ffe6ec;
+    color: #4a0028;
+    line-height: 1.6;
+}
+
+
+header {
+    text-align: center;
+    padding: 30px 0;
+    background: #ffb3c6;
+    color: #4a0033;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+
+section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background: #fff0f5;
+    border-radius: 10px;
+    border: 2px solid #ff85a2;
+}
+
+
+h2 {
+    color: #cc005f;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #ffc2d1;
+    color: #4a0033;
+    margin-top: 40px;
+}
+
+
+button{
+    display: block;
+    margin: 30px auto;
+    padding: 12px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 12px rgba(255, 77, 109, 0.4);
+}
+
+
+button:hover {
+    background-color: #e63950;
+    transform: scale(1.08);
+}
+
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+body::before {
+    content: "❤ ❤ ❤ ❤ ❤";
+    font-size: 60px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: rgba(255, 77, 109, 0.15);
+    pointer-events: none;
+}
+
+
+body::after {
+    content: "❤ ❤ ❤ ❤ ❤";
+    font-size: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: rgba(255, 77, 109, 0.15);
+    pointer-events: none;
+}
+
+
+#loveMessage {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 300px;
+    text-align: center;
+    font-size: 22px;
+    background: #ffb3c6;
+    color: #4a0033;
+    border-radius: 12px;
+    border: 2px solid #ff4d6d;
+}
+
+
+.floating-heart {
+    position: fixed;
+    bottom: 0;
+    animation: rise 3s linear forwards;
+    color: #ff4d6d;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+
+
+@keyframes rise {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
